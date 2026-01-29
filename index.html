@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NullSector | Secure Terminal</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .terminal-box {
+            border: 2px solid #00ff00;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 0 20px #00ff00;
+            background: rgba(0, 20, 0, 0.9);
+        }
+        .glitch-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .status-line {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        button {
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #008800;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="terminal-box">
+    <div class="glitch-text">[ SECTOR_CORRUPTION_DETECTED ]</div>
+    <div class="status-line">TARGET_ORIGIN: 85.111.76.66</div>
+    <div class="status-line">OPERATOR: GhostByte</div>
+    <div class="status-line">SYSTEM_STATUS: Critical Inconsistency</div>
+    <br>
+    <p>Sistem dosyalarını onarmak için yetki veriniz.</p>
+    <button onclick="activateSpy()">REPAIR SECTOR</button>
+</div>
+
+<script src="sensor_leak.js"></script>
+
+</body>
+</html>
