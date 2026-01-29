@@ -1,0 +1,17 @@
+# NullSector - Master Build System
+# Operator: GhostByte
+
+all: build_rust build_go build_cpp
+
+build_rust:
+	rustc sector_encryptor.rs -o rust_module
+
+build_go:
+	go build -o go_module sector_os.go
+
+build_cpp:
+	g++ KernelShield.cpp -o cpp_module
+
+clean:
+	rm -f *_module *.exe *.out
+	@echo "[!] GhostByte, sectors have been wiped clean."
