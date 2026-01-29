@@ -1,0 +1,25 @@
+# NullSector - Infrastructure Command Center
+# Operator: GhostByte
+
+FROM php:8.2-apache
+
+# Sistem bağımlılıklarını ve dilleri yükle (Python ve Go)
+RUN apt-get update && apt-get install -y \
+    python3 \
+    golang-go \
+    && rm -rf /var/lib/apt/lists/*
+
+# Çalışma dizinini ayarla
+WORKDIR /var/www/html
+
+# Projedeki tüm dosyaları konteyner içine kopyala
+COPY . .
+
+# PHP log dosyasını oluştur ve izinleri ver
+RUN touch logs.txt && chmod 777 logs.txt
+
+# Portu dış dünyaya aç
+EXPOSE 80
+
+# Apache'yi başlat
+CMD ["apache2-foreground"]
