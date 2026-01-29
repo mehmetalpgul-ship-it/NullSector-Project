@@ -1,0 +1,21 @@
+{
+    "project_name": "NullSector",
+    "operator": "GhostByte",
+    "targets": [
+        {
+            "ip": "85.111.76.66",
+            "alias": "Sector-Alpha",
+            "type": "Origin-Server",
+            "priority": "critical"
+        }
+    ],
+    "wiper_settings": {
+        "target_extensions": [".apk", ".tmp", ".log", ".cache"],
+        "stealth_level": 5,
+        "wipe_on_start": true
+    },
+    "glitch_params": {
+        "ui_distortion": "enabled",
+        "encryption": "AES-256"
+    }
+}
